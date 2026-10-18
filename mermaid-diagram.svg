@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1846.3719999999996 1041.1" width="1846.3719999999996" height="1041.1" style="--bg:#FFFFFF;--fg:#3B3B3B;--line:#3B3B3B;--accent:#005FB8;--muted:#3B3B3BCC;--surface:#F8F8F8;--border:#3B3B3B;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="CoordLayer" data-label="Central Orchestration &amp; Intelligence">
+  <rect x="40" y="515.4000000000001" width="289.581" height="113.80000000000001" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="515.4000000000001" width="289.581" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="52" y="529.4000000000001" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Central Orchestration &amp; Intelligence</text>
+</g>
+<g class="subgraph" data-id="OrgAtlas" data-label="Company A: Atlas Logistics (Shipper Hub)">
+  <rect x="357.58099999999996" y="539.4000000000001" width="441.04099999999994" height="229.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="357.58099999999996" y="539.4000000000001" width="441.04099999999994" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="369.58099999999996" y="553.4000000000001" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Company A: Atlas Logistics (Shipper Hub)</text>
+</g>
+<g class="subgraph" data-id="OrgMaghreb" data-label="Company B: Maghreb Freight (North Carrier)">
+  <rect x="826.6219999999998" y="589.7" width="402.509" height="229.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="826.6219999999998" y="589.7" width="402.509" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="838.6219999999998" y="603.7" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Company B: Maghreb Freight (North Carrier)</text>
+</g>
+<g class="subgraph" data-id="OrgSahara" data-label="Company C: Sahara Transport (South Carrier)">
+  <rect x="1257.1309999999999" y="589.7" width="401.7679999999999" height="229.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="1257.1309999999999" y="589.7" width="401.7679999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1269.1309999999999" y="603.7" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Company C: Sahara Transport (South Carrier)</text>
+</g>
+<g class="subgraph" data-id="AuditCluster" data-label="Tamper-Evident Ledger Storage">
+  <rect x="1096.0797499999999" y="873.3000000000001" width="231.783" height="127.80000000000001" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="1096.0797499999999" y="873.3000000000001" width="231.783" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1108.0797499999999" y="887.3000000000001" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Tamper-Evident Ledger Storage</text>
+</g>
+<polyline class="edge" data-from="User" data-to="FE" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="HTTP :3000" points="873.0944583333331,76.9 873.0944583333331,193.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FE" data-to="Coord" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="REST API :8000" points="873.0944583333331,247 873.0944583333331,363.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Coord" data-to="OpenRouter" data-style="solid" data-arrow-start="true" data-arrow-end="true" data-label="LLM Reasoning API" points="798.5676726190475,417.1 798.5676726190475,429.1 184.79050000000004,429.1 184.7905,571.4000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-start)" />
+<polyline class="edge" data-from="Coord" data-to="AgentAtlas" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="1. Internal Lookup" points="828.3783869047618,417.1 828.3783869047618,441.1 495.4963333333332,441.1 495.4963333333332,521.4000000000001 483.9221666666666,521.4000000000001 483.9221666666666,571.4000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Coord" data-to="GuardAtlas" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="2. Outbound Guard Approval" points="858.189101190476,417.1 858.189101190476,453.1 700.9954999999999,453.1 700.9954999999999,521.4000000000001 712.5696666666665,521.4000000000001 712.5696666666665,687.5333333333334" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Coord" data-to="AgentMaghreb" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="3. Parallel A2A Query" points="887.9998154761903,417.1 887.9998154761903,503.4 1033.61925,503.4 1033.6192499999997,633.7" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Coord" data-to="AgentSahara" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="3. Parallel A2A Query" points="917.8105297619046,417.1 917.8105297619046,491.4 1468.389,491.4 1468.389,633.7" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="GuardAtlas" data-to="DBAudit" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Commit Event Hash" points="677.5435,741.3333333333334 677.5435,855.3000000000001 1178.674083333333,855.3000000000001 1178.6740833333333,917.3000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Coord" data-to="DBAudit" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Log Final Collaboration" points="947.6212440476188,417.1 947.6212440476188,479.4 1746.3989999999997,479.4 1746.3989999999997,855.3000000000001 1245.2684166666666,855.3000000000001 1245.2684166666666,917.3000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AgentAtlas" data-to="DBAtlas" data-style="solid" data-arrow-start="true" data-arrow-end="true" points="483.9221666666666,625.2 483.9221666666666,656.3666666666668 459.02299999999997,656.3666666666668 459.02299999999997,687.5333333333334" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-start)" />
+<polyline class="edge" data-from="AgentAtlas" data-to="GuardAtlas" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="483.9221666666666,625.2 483.9221666666666,656.3666666666668 677.5434999999999,656.3666666666668 677.5434999999999,687.5333333333334" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AgentMaghreb" data-to="DBMaghreb" data-style="solid" data-arrow-start="true" data-arrow-end="true" points="1033.6192499999997,687.5 1033.6192499999997,711.5 933.9919999999998,711.5 933.9919999999998,735.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-start)" />
+<polyline class="edge" data-from="AgentMaghreb" data-to="GuardMaghreb" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1033.6192499999997,687.5 1033.6192499999997,711.5 1133.2464999999997,711.5 1133.2464999999997,735.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AgentSahara" data-to="DBSahara" data-style="solid" data-arrow-start="true" data-arrow-end="true" points="1468.389,687.5 1468.389,711.5 1368.947,711.5 1368.947,735.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-start)" />
+<polyline class="edge" data-from="AgentSahara" data-to="GuardSahara" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1468.389,687.5 1468.389,711.5 1567.831,711.5 1567.831,735.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="User" data-to="FE" data-label="HTTP :3000">
+  <rect x="835.5944583333333" y="119.9" width="74.08000000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="872.6344583333332" y="135.05" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">HTTP :3000</text>
+</g>
+<g class="edge-label" data-from="FE" data-to="Coord" data-label="REST API :8000">
+  <rect x="826.5944583333333" y="290" width="92.49400000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="872.8414583333333" y="305.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">REST API :8000</text>
+</g>
+<g class="edge-label" data-from="Coord" data-to="OpenRouter" data-label="LLM Reasoning API">
+  <rect x="128.29050000000004" y="436.1000000000001" width="112.09600000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="184.33850000000004" y="451.25000000000006" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">LLM Reasoning API</text>
+</g>
+<g class="edge-label" data-from="Coord" data-to="AgentAtlas" data-label="1. Internal Lookup">
+  <rect x="445.9963333333332" y="460.1" width="98.43400000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="495.2133333333332" y="475.25" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">1. Internal Lookup</text>
+</g>
+<g class="edge-label" data-from="Coord" data-to="GuardAtlas" data-label="2. Outbound Guard Approval">
+  <rect x="625.4954999999999" y="460.1" width="150.11200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="700.5514999999999" y="475.25" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">2. Outbound Guard Approval</text>
+</g>
+<g class="edge-label" data-from="Coord" data-to="AgentMaghreb" data-label="3. Parallel A2A Query">
+  <rect x="974.11925" y="510.4" width="118.036" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1033.13725" y="525.55" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">3. Parallel A2A Query</text>
+</g>
+<g class="edge-label" data-from="Coord" data-to="AgentSahara" data-label="3. Parallel A2A Query">
+  <rect x="1408.889" y="510.4" width="118.036" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1467.907" y="525.55" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">3. Parallel A2A Query</text>
+</g>
+<g class="edge-label" data-from="GuardAtlas" data-to="DBAudit" data-label="Commit Event Hash">
+  <rect x="624.5435" y="818.0000000000002" width="105.56200000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="677.3245000000001" y="833.1500000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Commit Event Hash</text>
+</g>
+<g class="edge-label" data-from="Coord" data-to="DBAudit" data-label="Log Final Collaboration">
+  <rect x="1682.8989999999997" y="818.0000000000001" width="126.946" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1746.3719999999996" y="833.1500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Log Final Collaboration</text>
+</g>
+<g class="node" data-id="User" data-label="👤 Operator / Admin" data-shape="stadium">
+  <rect x="795.0624583333331" y="40" width="156.06400000000002" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="873.0944583333331" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">👤 Operator / Admin</text>
+</g>
+<g class="node" data-id="FE" data-label="🖥️ Next.js 14 Dashboard
+(Multi-Tenant UI)" data-shape="rectangle">
+  <rect x="779.1309583333332" y="193.2" width="187.927" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="873.0944583333331" y="220.1" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="873.0944583333331" dy="-3.9000000000000012">🖥️ Next.js 14 Dashboard</tspan><tspan x="873.0944583333331" dy="16.900000000000002">(Multi-Tenant UI)</tspan></text>
+</g>
+<g class="node" data-id="Coord" data-label="🧠 Sovereign Coordinator
+(Orchestrator &amp; A2A Broker)" data-shape="rectangle">
+  <rect x="768.7569583333332" y="363.3" width="208.67499999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="873.0944583333331" y="390.2" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="873.0944583333331" dy="-3.9000000000000012">🧠 Sovereign Coordinator</tspan><tspan x="873.0944583333331" dy="16.900000000000002">(Orchestrator &amp; A2A Broker)</tspan></text>
+</g>
+<g class="node" data-id="OpenRouter" data-label="☁️ OpenRouter AI Gateway
+(Gemini 2.0 Flash / Claude / Llama 3.3)" data-shape="rectangle">
+  <rect x="56" y="571.4000000000001" width="257.581" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="184.7905" y="598.3000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="184.7905" dy="-3.9000000000000012">☁️ OpenRouter AI Gateway</tspan><tspan x="184.7905" dy="16.900000000000002">(Gemini 2.0 Flash / Claude / Llama 3.3)</tspan></text>
+</g>
+<g class="node" data-id="AgentAtlas" data-label="🤖 Atlas Org Agent
+(:8020 / A2A Card)" data-shape="rectangle">
+  <rect x="409.2246666666666" y="571.4000000000001" width="149.39499999999998" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="483.9221666666666" y="598.3000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="483.9221666666666" dy="-3.9000000000000012">🤖 Atlas Org Agent</tspan><tspan x="483.9221666666666" dy="16.900000000000002">(:8020 / A2A Card)</tspan></text>
+</g>
+<g class="node" data-id="GuardAtlas" data-label="🛡️ Atlas Sovereignty Guard
+(:8010 / Policy Engine)" data-shape="rectangle">
+  <rect x="572.4649999999999" y="687.5333333333334" width="210.15699999999995" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="677.5434999999999" y="714.4333333333334" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="677.5434999999999" dy="-3.9000000000000012">🛡️ Atlas Sovereignty Guard</tspan><tspan x="677.5434999999999" dy="16.900000000000002">(:8010 / Policy Engine)</tspan></text>
+</g>
+<g class="node" data-id="DBAtlas" data-label="🗄️ atlas_logistics DB
+(Fleet &amp; Private PII)" data-shape="cylinder">
+  <rect x="373.58099999999996" y="694.5333333333334" width="170.884" height="53.80000000000001" fill="var(--_node-fill)" stroke="none" />
+  <line x1="373.58099999999996" y1="694.5333333333334" x2="373.58099999999996" y2="748.3333333333335" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="544.4649999999999" y1="694.5333333333334" x2="544.4649999999999" y2="748.3333333333335" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="459.02299999999997" cy="748.3333333333335" rx="85.442" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="459.02299999999997" cy="694.5333333333334" rx="85.442" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="459.02299999999997" y="721.4333333333334" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="459.02299999999997" dy="-3.9000000000000012">🗄️ atlas_logistics DB</tspan><tspan x="459.02299999999997" dy="16.900000000000002">(Fleet &amp; Private PII)</tspan></text>
+</g>
+<g class="node" data-id="AgentMaghreb" data-label="🤖 Maghreb Org Agent
+(:8021 / A2A Card)" data-shape="rectangle">
+  <rect x="946.6952499999999" y="633.7" width="173.84799999999996" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1033.6192499999997" y="660.6" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1033.6192499999997" dy="-3.9000000000000012">🤖 Maghreb Org Agent</tspan><tspan x="1033.6192499999997" dy="16.900000000000002">(:8021 / A2A Card)</tspan></text>
+</g>
+<g class="node" data-id="GuardMaghreb" data-label="🛡️ Maghreb Guard
+(:8011)" data-shape="rectangle">
+  <rect x="1053.3619999999999" y="735.5" width="159.769" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1133.2464999999997" y="762.4" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1133.2464999999997" dy="-3.9000000000000012">🛡️ Maghreb Guard</tspan><tspan x="1133.2464999999997" dy="16.900000000000002">(:8011)</tspan></text>
+</g>
+<g class="node" data-id="DBMaghreb" data-label="🗄️ maghreb_freight DB
+(Delivery Slots)" data-shape="cylinder">
+  <rect x="842.6219999999998" y="742.5" width="182.73999999999998" height="53.80000000000001" fill="var(--_node-fill)" stroke="none" />
+  <line x1="842.6219999999998" y1="742.5" x2="842.6219999999998" y2="796.3" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="1025.3619999999999" y1="742.5" x2="1025.3619999999999" y2="796.3" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="933.9919999999998" cy="796.3" rx="91.36999999999999" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="933.9919999999998" cy="742.5" rx="91.36999999999999" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="933.9919999999998" y="769.4" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="933.9919999999998" dy="-3.9000000000000012">🗄️ maghreb_freight DB</tspan><tspan x="933.9919999999998" dy="16.900000000000002">(Delivery Slots)</tspan></text>
+</g>
+<g class="node" data-id="AgentSahara" data-label="🤖 Sahara Org Agent
+(:8022 / A2A Card)" data-shape="rectangle">
+  <rect x="1386.2814999999998" y="633.7" width="164.21499999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1468.389" y="660.6" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1468.389" dy="-3.9000000000000012">🤖 Sahara Org Agent</tspan><tspan x="1468.389" dy="16.900000000000002">(:8022 / A2A Card)</tspan></text>
+</g>
+<g class="node" data-id="GuardSahara" data-label="🛡️ Sahara Guard
+(:8012)" data-shape="rectangle">
+  <rect x="1492.763" y="735.5" width="150.136" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1567.831" y="762.4" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1567.831" dy="-3.9000000000000012">🛡️ Sahara Guard</tspan><tspan x="1567.831" dy="16.900000000000002">(:8012)</tspan></text>
+</g>
+<g class="node" data-id="DBSahara" data-label="🗄️ sahara_transport DB
+(Delivery Slots)" data-shape="cylinder">
+  <rect x="1273.1309999999999" y="742.5" width="191.63199999999995" height="53.80000000000001" fill="var(--_node-fill)" stroke="none" />
+  <line x1="1273.1309999999999" y1="742.5" x2="1273.1309999999999" y2="796.3" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="1464.763" y1="742.5" x2="1464.763" y2="796.3" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1368.947" cy="796.3" rx="95.81599999999997" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1368.947" cy="742.5" rx="95.81599999999997" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1368.947" y="769.4" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1368.947" dy="-3.9000000000000012">🗄️ sahara_transport DB</tspan><tspan x="1368.947" dy="16.900000000000002">(Delivery Slots)</tspan></text>
+</g>
+<g class="node" data-id="DBAudit" data-label="⛓️ sovereignty_audit DB
+(Chained SHA-256 Ledger)" data-shape="cylinder">
+  <rect x="1112.0797499999999" y="924.3000000000001" width="199.783" height="53.80000000000001" fill="var(--_node-fill)" stroke="none" />
+  <line x1="1112.0797499999999" y1="924.3000000000001" x2="1112.0797499999999" y2="978.1000000000001" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="1311.8627499999998" y1="924.3000000000001" x2="1311.8627499999998" y2="978.1000000000001" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1211.9712499999998" cy="978.1000000000001" rx="99.8915" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <ellipse cx="1211.9712499999998" cy="924.3000000000001" rx="99.8915" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1211.9712499999998" y="951.2" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="1211.9712499999998" dy="-3.9000000000000012">⛓️ sovereignty_audit DB</tspan><tspan x="1211.9712499999998" dy="16.900000000000002">(Chained SHA-256 Ledger)</tspan></text>
+</g>
+</svg>

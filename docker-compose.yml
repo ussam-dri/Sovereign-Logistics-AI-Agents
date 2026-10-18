@@ -1,0 +1,177 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo_secret_change_me
+      POSTGRES_DB: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init/00-create-databases.sh:/docker-entrypoint-initdb.d/00-create-databases.sh
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U demo -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - sovereign
+
+  db-seed:
+    build:
+      context: ./db
+      dockerfile: Dockerfile.seed
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sovereign
+    restart: "no"
+
+  guard-atlas:
+    build: ./services/guard
+    volumes:
+      - ./services/guard/guard_app:/app/guard_app
+      - ./services/guard/policies:/app/policies
+    command: ["uvicorn", "guard_app.main:app", "--host", "0.0.0.0", "--port", "8010", "--reload"]
+    environment:
+      SOURCE_ORG: atlas_logistics
+      POLICY_PATH: /app/policies/atlas_outbound.yaml
+      DATABASE_URL_AUDIT: postgresql://demo:demo_secret_change_me@postgres:5432/sovereignty_audit
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+      PARTNER_JWT_SECRET: ${PARTNER_JWT_SECRET:-dev_jwt_secret}
+    depends_on:
+      db-seed:
+        condition: service_completed_successfully
+    networks:
+      - sovereign
+
+  guard-maghreb:
+    build: ./services/guard
+    volumes:
+      - ./services/guard/guard_app:/app/guard_app
+      - ./services/guard/policies:/app/policies
+    command: ["uvicorn", "guard_app.main:app", "--host", "0.0.0.0", "--port", "8011", "--reload"]
+    environment:
+      SOURCE_ORG: maghreb_freight
+      POLICY_PATH: /app/policies/maghreb_outbound.yaml
+      DATABASE_URL_AUDIT: postgresql://demo:demo_secret_change_me@postgres:5432/sovereignty_audit
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+      PARTNER_JWT_SECRET: ${PARTNER_JWT_SECRET:-dev_jwt_secret}
+    depends_on:
+      db-seed:
+        condition: service_completed_successfully
+    networks:
+      - sovereign
+
+  guard-sahara:
+    build: ./services/guard
+    volumes:
+      - ./services/guard/guard_app:/app/guard_app
+      - ./services/guard/policies:/app/policies
+    command: ["uvicorn", "guard_app.main:app", "--host", "0.0.0.0", "--port", "8012", "--reload"]
+    environment:
+      SOURCE_ORG: sahara_transport
+      POLICY_PATH: /app/policies/sahara_outbound.yaml
+      DATABASE_URL_AUDIT: postgresql://demo:demo_secret_change_me@postgres:5432/sovereignty_audit
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+      PARTNER_JWT_SECRET: ${PARTNER_JWT_SECRET:-dev_jwt_secret}
+    depends_on:
+      db-seed:
+        condition: service_completed_successfully
+    networks:
+      - sovereign
+
+  agent-atlas:
+    build: ./services/org-agent
+    volumes:
+      - ./services/org-agent/org_agent:/app/org_agent
+    command: ["uvicorn", "org_agent.main:app", "--host", "0.0.0.0", "--port", "8020", "--reload"]
+    environment:
+      ORG_ID: atlas_logistics
+      ORG_DISPLAY_NAME: Atlas Logistics
+      DATABASE_URL: postgresql://demo:demo_secret_change_me@postgres:5432/atlas_logistics
+      PUBLIC_URL: http://agent-atlas:8020
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+    depends_on:
+      db-seed:
+        condition: service_completed_successfully
+    networks:
+      - sovereign
+
+  agent-maghreb:
+    build: ./services/org-agent
+    volumes:
+      - ./services/org-agent/org_agent:/app/org_agent
+    environment:
+      ORG_ID: maghreb_freight
+      ORG_DISPLAY_NAME: Maghreb Freight
+      DATABASE_URL: postgresql://demo:demo_secret_change_me@postgres:5432/maghreb_freight
+      PUBLIC_URL: http://agent-maghreb:8021
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+    command: ["uvicorn", "org_agent.main:app", "--host", "0.0.0.0", "--port", "8021", "--reload"]
+    depends_on:
+      db-seed:
+        condition: service_completed_successfully
+    networks:
+      - sovereign
+
+  agent-sahara:
+    build: ./services/org-agent
+    volumes:
+      - ./services/org-agent/org_agent:/app/org_agent
+    environment:
+      ORG_ID: sahara_transport
+      ORG_DISPLAY_NAME: Sahara Transport
+      DATABASE_URL: postgresql://demo:demo_secret_change_me@postgres:5432/sahara_transport
+      PUBLIC_URL: http://agent-sahara:8022
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+    command: ["uvicorn", "org_agent.main:app", "--host", "0.0.0.0", "--port", "8022", "--reload"]
+    depends_on:
+      db-seed:
+        condition: service_completed_successfully
+    networks:
+      - sovereign
+
+  coordinator:
+    build: ./services/coordinator
+    volumes:
+      - ./services/coordinator/coordinator_app:/app/coordinator_app
+    command: ["uvicorn", "coordinator_app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    ports:
+      - "8000:8000"
+    environment:
+      AGENT_ATLAS_URL: http://agent-atlas:8020
+      GUARD_ATLAS_URL: http://guard-atlas:8010
+      DATABASE_URL_AUDIT: postgresql://demo:demo_secret_change_me@postgres:5432/sovereignty_audit
+      INTER_SERVICE_KEY: ${INTER_SERVICE_KEY:-dev_key_change_me}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-google/gemini-2.0-flash-001}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.0-flash}
+      PUBLIC_URL: http://localhost:8000
+    depends_on:
+      - agent-atlas
+      - agent-maghreb
+      - agent-sahara
+      - guard-atlas
+    networks:
+      - sovereign
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_COORDINATOR_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - coordinator
+    networks:
+      - sovereign
+
+networks:
+  sovereign:
+    driver: bridge
+
+volumes:
+  pgdata:

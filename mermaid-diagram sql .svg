@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1891.524 1141.45" width="1891.524" height="1141.45" style="--bg:#FFFFFF;--fg:#3B3B3B;--line:#3B3B3B;--accent:#005FB8;--muted:#3B3B3BCC;--surface:#F8F8F8;--border:#3B3B3B;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="seq-arrow" markerWidth="8" markerHeight="5" refX="8" refY="2.5" orient="auto-start-reverse">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" />
+  </marker>
+  <marker id="seq-arrow-open" markerWidth="8" markerHeight="5" refX="8" refY="2.5" orient="auto-start-reverse">
+    <polyline points="0 0, 8 2.5, 0 5" fill="none" stroke="var(--_arrow)" stroke-width="1" />
+  </marker>
+</defs>
+<g class="block" data-type="alt" data-label="Unauthorized PII or Forbidden Pattern Present">
+  <rect x="410.948" y="470.45" width="1450.576" height="164.00000000000006" rx="0" ry="0" fill="none" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="410.948" y="470.45" width="280.3299999999999" height="18" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="416.948" y="479.45" font-size="11" font-weight="600" fill="var(--_text-sec)" dy="3.8499999999999996">alt [Unauthorized PII or Forbidden Pattern Present]</text>
+  <line x1="410.948" y1="546.45" x2="1861.524" y2="546.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+  <text x="418.948" y="560.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">[Compliant Outbound Payload]</text>
+</g>
+<g class="block" data-type="par" data-label="Query Maghreb Carrier">
+  <rect x="410.948" y="657.45" width="1072.225" height="204" rx="0" ry="0" fill="none" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="410.948" y="657.45" width="169.45000000000002" height="18" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="416.948" y="666.45" font-size="11" font-weight="600" fill="var(--_text-sec)" dy="3.8499999999999996">par [Query Maghreb Carrier]</text>
+  <line x1="410.948" y1="773.45" x2="1483.1729999999998" y2="773.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+  <text x="418.948" y="787.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">[Query Sahara Carrier]</text>
+</g>
+<line class="lifeline" data-actor="User" x1="107.737" y1="92.45" x2="107.737" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="FE" x1="303.211" y1="70" x2="303.211" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Coord" x1="503.131" y1="70" x2="503.131" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Atlas" x1="704.9034999999999" y1="70" x2="704.9034999999999" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Guard" x1="928.5355" y1="70" x2="928.5355" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Maghreb" x1="1162.1709999999998" y1="70" x2="1162.1709999999998" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Sahara" x1="1382.4684999999997" y1="70" x2="1382.4684999999997" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="LLM" x1="1584.9819999999997" y1="70" x2="1584.9819999999997" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<line class="lifeline" data-actor="Audit" x1="1774.1574999999998" y1="70" x2="1774.1574999999998" y2="1111.45" stroke="var(--_line)" stroke-width="0.75" stroke-dasharray="6 4" />
+<g class="message" data-from="User" data-to="FE" data-label="Click &quot;Run Scenario&quot;" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="107.737" y1="112.45" x2="303.211" y2="112.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="205.474" y="102.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Click &quot;Run Scenario&quot;</text>
+</g>
+<g class="message" data-from="FE" data-to="Coord" data-label="POST /demo/run-scenario" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="303.211" y1="152.45" x2="503.131" y2="152.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="403.171" y="142.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">POST /demo/run-scenario</text>
+</g>
+<g class="message" data-from="Coord" data-to="Atlas" data-label="GET /shipments/SHP-1042 (with X-Service-Key)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="207.45" x2="704.9034999999999" y2="207.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="604.0172499999999" y="197.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">GET /shipments/SHP-1042 (with X-Service-Key)</text>
+</g>
+<g class="message" data-from="Atlas" data-to="Coord" data-label="Returns private internal record (with customer PII)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="704.9034999999999" y1="247.45" x2="503.131" y2="247.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="604.0172499999999" y="237.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Returns private internal record (with customer PII)</text>
+</g>
+<g class="message" data-from="Coord" data-to="Coord" data-label="Strips customer PII (creates candidate payload)" data-line-style="solid" data-arrow-head="filled" data-self="true">
+  <polyline points="503.131,302.45 533.131,302.45 533.131,322.45 503.131,322.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="541.131" y="312.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Strips customer PII (creates candidate payload)</text>
+</g>
+<g class="message" data-from="Coord" data-to="Guard" data-label="POST /guard/outbound (candidate payload)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="372.45" x2="928.5355" y2="372.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="715.8332499999999" y="362.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">POST /guard/outbound (candidate payload)</text>
+</g>
+<g class="message" data-from="Guard" data-to="Guard" data-label="Evaluate atlas_outbound.yaml (regex &amp; allowlist)" data-line-style="solid" data-arrow-head="filled" data-self="true">
+  <polyline points="928.5355,412.45 958.5355,412.45 958.5355,432.45 928.5355,432.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="966.5355" y="422.45" font-size="11" text-anchor="start" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Evaluate atlas_outbound.yaml (regex &amp; allowlist)</text>
+</g>
+<g class="message" data-from="Guard" data-to="Coord" data-label="HTTP 403 Forbidden (Attack Intercepted!)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="928.5355" y1="510.45" x2="503.131" y2="510.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="715.8332499999999" y="500.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">HTTP 403 Forbidden (Attack Intercepted!)</text>
+</g>
+<g class="message" data-from="Guard" data-to="Audit" data-label="Commit chained SHA-256 block into audit_ledger" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="928.5355" y1="574.45" x2="1774.1574999999998" y2="574.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="1351.3464999999999" y="564.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Commit chained SHA-256 block into audit_ledger</text>
+</g>
+<g class="message" data-from="Guard" data-to="Coord" data-label="HTTP 200 OK (Sanitized Payload Approved)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="928.5355" y1="614.45" x2="503.131" y2="614.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="715.8332499999999" y="604.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">HTTP 200 OK (Sanitized Payload Approved)</text>
+</g>
+<g class="message" data-from="Coord" data-to="Maghreb" data-label="POST /a2a/v1/assist/query (Destination, Weight, Deadline)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="697.45" x2="1162.1709999999998" y2="697.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="832.6509999999998" y="687.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">POST /a2a/v1/assist/query (Destination, Weight, Deadline)</text>
+</g>
+<g class="message" data-from="Maghreb" data-to="Coord" data-label="Proposal: 2 trucks, ETA 18h, Cost $3,200, Meets: YES" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="1162.1709999999998" y1="737.45" x2="503.131" y2="737.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="832.6509999999998" y="727.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Proposal: 2 trucks, ETA 18h, Cost $3,200, Meets: YES</text>
+</g>
+<g class="message" data-from="Coord" data-to="Sahara" data-label="POST /a2a/v1/assist/query (Destination, Weight, Deadline)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="801.45" x2="1382.4684999999997" y2="801.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="942.7997499999999" y="791.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">POST /a2a/v1/assist/query (Destination, Weight, Deadline)</text>
+</g>
+<g class="message" data-from="Sahara" data-to="Coord" data-label="Proposal: 1 truck, ETA 36h, Cost $2,800, Meets: NO" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="1382.4684999999997" y1="841.45" x2="503.131" y2="841.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="942.7997499999999" y="831.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Proposal: 1 truck, ETA 36h, Cost $2,800, Meets: NO</text>
+</g>
+<g class="message" data-from="Coord" data-to="LLM" data-label="POST /chat/completions (Proposals + Shipment Constraints)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="896.45" x2="1584.9819999999997" y2="896.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="1044.0565" y="886.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">POST /chat/completions (Proposals + Shipment Constraints)</text>
+</g>
+<g class="message" data-from="LLM" data-to="Coord" data-label="Structured JSON Decision (Winner: Maghreb, Confidence: 95%, Risks)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="1584.9819999999997" y1="936.45" x2="503.131" y2="936.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="1044.0565" y="926.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Structured JSON Decision (Winner: Maghreb, Confidence: 95%, Risks)</text>
+</g>
+<g class="message" data-from="Coord" data-to="Audit" data-label="INSERT INTO collaboration_events (task_id, winner, proposals, ai_decision)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="991.45" x2="1774.1574999999998" y2="991.45" stroke="var(--_line)" stroke-width="1" marker-end="url(#seq-arrow)" />
+  <text x="1138.6442499999998" y="981.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">INSERT INTO collaboration_events (task_id, winner, proposals, ai_decision)</text>
+</g>
+<g class="message" data-from="Coord" data-to="FE" data-label="Return complete DemoResult (Steps, Winner, AI Reasoning)" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="503.131" y1="1031.45" x2="303.211" y2="1031.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="403.171" y="1021.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Return complete DemoResult (Steps, Winner, AI Reasoning)</text>
+</g>
+<g class="message" data-from="FE" data-to="User" data-label="Render live stepper, winning proposal card, and diagnostic feed" data-line-style="dashed" data-arrow-head="filled" data-self="false">
+  <line x1="303.211" y1="1071.45" x2="107.737" y2="1071.45" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#seq-arrow)" />
+  <text x="205.474" y="1061.45" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">Render live stepper, winning proposal card, and diagnostic feed</text>
+</g>
+<g class="note" data-position="over" data-actors="Coord,Atlas">
+  <polygon points="529.1192499999999,160.45 672.9152499999998,160.45 678.9152499999998,166.45 678.9152499999998,183.45 529.1192499999999,183.45" fill="var(--bg)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <polygon points="672.9152499999998,160.45 678.9152499999998,166.45 672.9152499999998,166.45" fill="var(--_inner-stroke)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="604.0172499999999" y="171.95" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">1. Internal Record Retrieval</text>
+</g>
+<g class="note" data-position="over" data-actors="Coord,Guard">
+  <polygon points="604.4042499999999,255.45 821.2622499999999,255.45 827.2622499999999,261.45 827.2622499999999,278.45 604.4042499999999,278.45" fill="var(--bg)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <polygon points="821.2622499999999,255.45 827.2622499999999,261.45 821.2622499999999,261.45" fill="var(--_inner-stroke)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="715.8332499999999" y="266.95" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">2. Outbound Sovereignty Guard Inspection</text>
+</g>
+<g class="note" data-position="over" data-actors="Coord,Sahara">
+  <polygon points="856.3187499999999,622.45 1023.2807499999999,622.45 1029.28075,628.45 1029.28075,645.45 856.3187499999999,645.45" fill="var(--bg)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <polygon points="1023.2807499999999,622.45 1029.28075,628.45 1023.2807499999999,628.45" fill="var(--_inner-stroke)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="942.7997499999999" y="633.95" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">3. Parallel A2A Partner Queries</text>
+</g>
+<g class="note" data-position="over" data-actors="Coord,LLM">
+  <polygon points="942.7254999999999,849.45 1139.3874999999998,849.45 1145.3874999999998,855.45 1145.3874999999998,872.45 942.7254999999999,872.45" fill="var(--bg)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <polygon points="1139.3874999999998,849.45 1145.3874999999998,855.45 1139.3874999999998,855.45" fill="var(--_inner-stroke)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1044.0565" y="860.95" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">4. Multi-Factor AI Proposal Reasoning</text>
+</g>
+<g class="note" data-position="over" data-actors="Coord,Audit">
+  <polygon points="1048.00525,944.45 1223.28325,944.45 1229.28325,950.45 1229.28325,967.45 1048.00525,967.45" fill="var(--bg)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <polygon points="1223.28325,944.45 1229.28325,950.45 1223.28325,950.45" fill="var(--_inner-stroke)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1138.6442499999998" y="955.95" font-size="11" text-anchor="middle" font-weight="400" fill="var(--_text-muted)" dy="3.8499999999999996">5. Collaboration Settlement &amp; Audit</text>
+</g>
+<g class="actor" data-id="User" data-label="👤 User / Dashboard" data-type="actor">
+  <g transform="translate(89.737,32) scale(1.5)">
+    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="none" stroke="var(--_line)" stroke-width="0.6666666666666666" />
+    <path d="M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z" fill="none" stroke="var(--_line)" stroke-width="0.6666666666666666" />
+    <path d="M5.62842 18.3563C7.08963 17.0398 9.39997 16 12 16C14.6 16 16.9104 17.0398 18.3716 18.3563" fill="none" stroke="var(--_line)" stroke-width="0.6666666666666666" />
+  </g>
+  <text x="107.737" y="84" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">👤 User / Dashboard</text>
+</g>
+<g class="actor" data-id="FE" data-label="🖥️ Next.js Frontend" data-type="participant">
+  <rect x="225.47400000000002" y="30" width="155.474" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="303.211" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🖥️ Next.js Frontend</text>
+</g>
+<g class="actor" data-id="Coord" data-label="🧠 Coordinator (:8000)" data-type="participant">
+  <rect x="420.948" y="30" width="164.36599999999999" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="503.131" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🧠 Coordinator (:8000)</text>
+</g>
+<g class="actor" data-id="Atlas" data-label="🤖 Atlas Agent (:8020)" data-type="participant">
+  <rect x="625.3139999999999" y="30" width="159.179" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="704.9034999999999" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🤖 Atlas Agent (:8020)</text>
+</g>
+<g class="actor" data-id="Guard" data-label="🛡️ Sovereignty Guard (:8010)" data-type="participant">
+  <rect x="824.4929999999999" y="30" width="208.08499999999998" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="928.5355" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🛡️ Sovereignty Guard (:8010)</text>
+</g>
+<g class="actor" data-id="Maghreb" data-label="🚚 Maghreb Agent (:8021)" data-type="participant">
+  <rect x="1072.5779999999997" y="30" width="179.18599999999998" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1162.1709999999998" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🚚 Maghreb Agent (:8021)</text>
+</g>
+<g class="actor" data-id="Sahara" data-label="🏜️ Sahara Agent (:8022)" data-type="participant">
+  <rect x="1291.7639999999997" y="30" width="181.409" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1382.4684999999997" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">🏜️ Sahara Agent (:8022)</text>
+</g>
+<g class="actor" data-id="LLM" data-label="☁️ OpenRouter AI" data-type="participant">
+  <rect x="1513.1729999999998" y="30" width="143.618" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1584.9819999999997" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">☁️ OpenRouter AI</text>
+</g>
+<g class="actor" data-id="Audit" data-label="⛓️ Audit Ledger DB" data-type="participant">
+  <rect x="1696.7909999999997" y="30" width="154.733" height="40" rx="4" ry="4" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="1774.1574999999998" y="50" font-size="13" text-anchor="middle" font-weight="500" fill="var(--_text)" dy="4.55">⛓️ Audit Ledger DB</text>
+</g>
+</svg>

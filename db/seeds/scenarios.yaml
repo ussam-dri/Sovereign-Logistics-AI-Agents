@@ -1,0 +1,26 @@
+# Fictional scenario anchors
+demo_shipment_ref: SHP-1042
+demo_destination: Casablanca
+demo_weight_kg: 1200
+
+orgs:
+  atlas_logistics:
+    shipments: 500
+    trucks: 30
+    drivers: 40
+    demo_trucks_total: 12
+    demo_trucks_occupied: 12
+  maghreb_freight:
+    shipments: 400
+    trucks: 25
+    drivers: 35
+    suitable_trucks_for_demo: 2
+    demo_eta_hours: 18
+  sahara_transport:
+    shipments: 350
+    trucks: 20
+    drivers: 30
+    suitable_trucks_for_demo: 1
+    demo_eta_hours: 36
+
+seed: 424242

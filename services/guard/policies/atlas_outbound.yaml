@@ -1,0 +1,15 @@
+policy_id: atlas_logistics_outbound_v1
+allowed_fields:
+  - shipment_ref
+  - destination
+  - weight_kg
+  - deadline
+  - source_org
+forbidden_patterns:
+  - customer_*
+  - driver_*
+  - phone
+  - email
+  - customer_name
+  - inventory
+on_violation: reject

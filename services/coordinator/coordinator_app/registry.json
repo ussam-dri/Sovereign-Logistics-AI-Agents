@@ -1,0 +1,16 @@
+{
+  "partners": [
+    {
+      "org_id": "maghreb_freight",
+      "display_name": "Maghreb Freight (Fictional)",
+      "agent_url": "http://agent-maghreb:8021",
+      "capabilities": ["assist_query"]
+    },
+    {
+      "org_id": "sahara_transport",
+      "display_name": "Sahara Transport (Fictional)",
+      "agent_url": "http://agent-sahara:8022",
+      "capabilities": ["assist_query"]
+    }
+  ]
+}

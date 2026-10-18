@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/
+frontend/.next/
+frontend/out/
+infra/aws/cdk.out/
+*.egg-info/
+pgdata/

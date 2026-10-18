@@ -1,0 +1,14 @@
+policy_id: maghreb_freight_outbound_v1
+allowed_fields:
+  - shipment_ref
+  - destination
+  - weight_kg
+  - deadline
+  - source_org
+  - proposal
+forbidden_patterns:
+  - customer_*
+  - driver_*
+  - phone
+  - email
+on_violation: reject
