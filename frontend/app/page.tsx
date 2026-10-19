@@ -2,8 +2,18 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const COORDINATOR =
-  process.env.NEXT_PUBLIC_COORDINATOR_URL ?? "http://localhost:8000";
+const getCoordinatorUrl = () => {
+  if (typeof window !== "undefined") {
+    const envUrl = process.env.NEXT_PUBLIC_COORDINATOR_URL;
+    if (envUrl && !envUrl.includes("localhost") && !envUrl.includes("127.0.0.1")) {
+      return envUrl;
+    }
+    return `${window.location.protocol}//${window.location.hostname}:8000`;
+  }
+  return process.env.NEXT_PUBLIC_COORDINATOR_URL ?? "http://localhost:8000";
+};
+
+const COORDINATOR = getCoordinatorUrl();
 
 type RoleMode = "atlas" | "maghreb" | "sahara" | "admin";
 
