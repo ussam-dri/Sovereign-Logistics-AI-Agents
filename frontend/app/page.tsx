@@ -401,14 +401,23 @@ export default function Home() {
       const res = await fetch(`${COORDINATOR}/demo/test-violation/${violationId}`, {
         method: "POST",
       });
+
+      if (!res.ok) {
+        const errorBody = await res.json().catch(() => ({}));
+        const errorDetail = typeof errorBody.detail === "string" ? errorBody.detail : `HTTP ${res.status}`;
+        throw new Error(errorDetail);
+      }
+
       const data: ViolationResult = await res.json();
       setViolationResult(data);
 
+      const rejectedList = Array.isArray(data.rejected_fields) && data.rejected_fields.length > 0
+        ? data.rejected_fields.join(", ")
+        : "None";
+
       addConsoleLog(
         "error",
-        `[GUARD REJECTION] HTTP ${data.guard_status_code}: Attack "${data.name}" was BLOCKED. Rejected fields: [${data.rejected_fields.join(
-          ", "
-        )}]. Reason: ${data.rejection_reason}`
+        `[GUARD REJECTION] HTTP ${data.guard_status_code}: Attack "${data.name}" was BLOCKED. Rejected fields: [${rejectedList}]. Reason: ${data.rejection_reason || "Forbidden"}`
       );
 
       await loadAudit();
@@ -1198,10 +1207,10 @@ export default function Home() {
                   </p>
                   <button
                     className="btn-outline-danger"
-                    onClick={() => testViolation("leak_customer_pii")}
-                    disabled={violationLoading === "leak_customer_pii"}
+                    onClick={() => testViolation("customer_pii")}
+                    disabled={violationLoading === "customer_pii"}
                   >
-                    <span>{violationLoading === "leak_customer_pii" ? "Simulating..." : "Test PII Leak"}</span>
+                    <span>{violationLoading === "customer_pii" ? "Simulating..." : "Test PII Leak"}</span>
                   </button>
                 </div>
 
@@ -1217,10 +1226,10 @@ export default function Home() {
                   </p>
                   <button
                     className="btn-outline-danger"
-                    onClick={() => testViolation("leak_pricing")}
-                    disabled={violationLoading === "leak_pricing"}
+                    onClick={() => testViolation("commercial_secrets")}
+                    disabled={violationLoading === "commercial_secrets"}
                   >
-                    <span>{violationLoading === "leak_pricing" ? "Simulating..." : "Test Pricing Leak"}</span>
+                    <span>{violationLoading === "commercial_secrets" ? "Simulating..." : "Test Pricing Leak"}</span>
                   </button>
                 </div>
 
@@ -1236,10 +1245,10 @@ export default function Home() {
                   </p>
                   <button
                     className="btn-outline-danger"
-                    onClick={() => testViolation("prompt_injection")}
-                    disabled={violationLoading === "prompt_injection"}
+                    onClick={() => testViolation("unauthorized_fields")}
+                    disabled={violationLoading === "unauthorized_fields"}
                   >
-                    <span>{violationLoading === "prompt_injection" ? "Simulating..." : "Test Injection"}</span>
+                    <span>{violationLoading === "unauthorized_fields" ? "Simulating..." : "Test Injection"}</span>
                   </button>
                 </div>
               </div>
@@ -1248,18 +1257,23 @@ export default function Home() {
                 <div style={{ marginTop: "1.5rem", padding: "1.25rem", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "8px" }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
                     <span style={{ fontWeight: "700", color: "#991b1b", fontSize: "0.9rem" }}>
-                      ATTACK BLOCKED · HTTP {violationResult.guard_status_code} FORBIDDEN
+                      ATTACK BLOCKED · HTTP {violationResult.guard_status_code || 403} FORBIDDEN
                     </span>
                     <span className="badge-clean black">GUARD ENFORCED</span>
                   </div>
                   <div style={{ fontSize: "0.84rem", color: "#7f1d1d", marginBottom: "0.5rem" }}>
-                    <strong>Attack Vector:</strong> {violationResult.name} — {violationResult.description}
+                    <strong>Attack Vector:</strong> {violationResult.name || "Safety Violation"} — {violationResult.description || "Policy test"}
                   </div>
                   <div style={{ fontSize: "0.82rem", color: "#7f1d1d", marginBottom: "0.5rem" }}>
-                    <strong>Rejected Fields:</strong> <code>{violationResult.rejected_fields.join(", ")}</code>
+                    <strong>Rejected Fields:</strong>{" "}
+                    <code>
+                      {Array.isArray(violationResult.rejected_fields) && violationResult.rejected_fields.length > 0
+                        ? violationResult.rejected_fields.join(", ")
+                        : "Forbidden attribute or pattern detected"}
+                    </code>
                   </div>
                   <div style={{ fontSize: "0.82rem", color: "#7f1d1d" }}>
-                    <strong>Rejection Reason:</strong> {violationResult.rejection_reason}
+                    <strong>Rejection Reason:</strong> {violationResult.rejection_reason || "Forbidden pattern or non-whitelisted field detected"}
                   </div>
                 </div>
               )}

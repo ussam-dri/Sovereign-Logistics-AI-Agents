@@ -353,10 +353,18 @@ def list_violation_scenarios():
 @app.post("/demo/test-violation/{violation_id}", response_model=ViolationTestResult)
 async def test_specific_violation(violation_id: str):
     """Run a specific safety violation attack against the Sovereign Guard."""
-    if violation_id not in VIOLATION_CATALOG:
+    # Support both legacy and new attack scenario identifiers
+    alias_map = {
+        "leak_customer_pii": "customer_pii",
+        "leak_pricing": "commercial_secrets",
+        "prompt_injection": "unauthorized_fields",
+    }
+    resolved_id = alias_map.get(violation_id, violation_id)
+
+    if resolved_id not in VIOLATION_CATALOG:
         raise HTTPException(404, f"Unknown violation scenario: {violation_id}")
 
-    scenario = VIOLATION_CATALOG[violation_id]
+    scenario = VIOLATION_CATALOG[resolved_id]
     payload = scenario["payload"]
     svc_headers = _service_headers()
 
@@ -381,7 +389,13 @@ async def test_specific_violation(violation_id: str):
                     request_id=data.get("request_id"),
                 )
         except httpx.HTTPStatusError as exc:
-            detail = exc.response.json().get("detail", {})
+            resp_json = {}
+            try:
+                resp_json = exc.response.json()
+            except Exception:
+                pass
+            raw_detail = resp_json.get("detail", {}) if isinstance(resp_json, dict) else {}
+            detail = raw_detail if isinstance(raw_detail, dict) else {"reason": str(raw_detail)}
             return ViolationTestResult(
                 violation_id=violation_id,
                 name=scenario["name"],
