@@ -441,7 +441,7 @@ export default function Home() {
             <div className="brand-title">
               Sovereign AI <span className="brand-version">v2.4</span>
             </div>
-            <div className="brand-subtitle">Fujitsu Multi-Agent Network</div>
+            <div className="brand-subtitle"> Multi-Agent Network</div>
           </div>
         </div>
 
