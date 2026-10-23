@@ -167,7 +167,7 @@ The winning carrier is awarded the route. The final collaboration event is commi
 The application features a modern, high-contrast, minimalist black-and-white interface inspired by clean enterprise dashboards. The default landing view provides an interactive architectural canvas, real-time node telemetry, and a component deep-dive inspector.
 
 <p align="center">
-  <img src="docs/screenshots/walkthrough.png" alt="Sovereign AI Walkthrough Page" width="100%" />
+  <img src="./walkthrough.png" alt="Sovereign AI Walkthrough Page" width="100%" />
 </p>
 
 *The default Walkthrough view displaying core data sovereignty principles, multi-tenant navigation, and the interactive system topology diagram.*
