@@ -288,8 +288,8 @@ When an auditor triggers `GET /admin/ledger/verify`, the Coordinator iterates th
 
 ### 1. Clone & Configure
 ```bash
-git clone https://github.com/your-org/fujitsu-agents.git
-cd fujitsu-agents
+git clone https://github.com/ussam-dri/Sovereign-Logistics-AI-Agents
+cd agents
 
 # Create your local environment configuration
 cp .env.example .env
@@ -417,8 +417,8 @@ The application features **dynamic client-side host resolution**. When deployed 
 
 4. **Deploy Application**:
    ```bash
-   git clone https://github.com/your-org/fujitsu-agents.git
-   cd fujitsu-agents
+   git clone https://github.com/ussam-dri/Sovereign-Logistics-AI-Agents
+   cd agents
    cp .env.example .env
    # Edit .env with your OpenRouter key if desired
 
