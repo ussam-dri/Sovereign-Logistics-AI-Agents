@@ -1,6 +1,7 @@
-# Sovereign AI Multi-Agent Network
+# Sovereign Logistics AI Agents
 
-> Decentralized Agent-to-Agent (A2A) logistics collaboration with zero-knowledge data sovereignty enforcement, OpenRouter / Gemini LLM reasoning, and cryptographically chained SHA-256 audit trails.
+
+> Decentralized Agent-to-Agent (A2A) logistics collaboration with zero-knowledge data sovereignty enforcement,  LLM API reasoning, and cryptographically chained SHA-256 audit trails.
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-black?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat-square&logo=nextdotjs)](https://nextjs.org)
@@ -60,12 +61,12 @@ The platform deploys as an isolated multi-service mesh comprising 9 microservice
 
 ```mermaid
 flowchart TD
-    User["Logistics Operator / Browser"] -->|"HTTP :3000"| FE["Next.js 14 Minimalist Dashboard\n(Multi-Tenant UI)"]
+    User["Logistics Operator / Browser"] -->|"HTTP :3000"| FE[" Dashboard\n(Multi-Tenant UI)"]
     FE -->|"REST API :8000"| Coord["Sovereign Coordinator\n(Orchestrator & A2A Broker)"]
 
     subgraph Central ["Central Orchestration & Intelligence"]
         Coord
-        LLM["OpenRouter AI Gateway\n(Gemini 2.0 Flash / Claude / Llama)"]
+        LLM["LLM API  Gateway"]
         Coord <-->|"Structured Prompting"| LLM
     end
 
@@ -167,7 +168,7 @@ The winning carrier is awarded the route. The final collaboration event is commi
 The application features a modern, high-contrast, minimalist black-and-white interface inspired by clean enterprise dashboards. The default landing view provides an interactive architectural canvas, real-time node telemetry, and a component deep-dive inspector.
 
 <p align="center">
-  <img src="docs/screenshots/walkthrough.png" alt="Sovereign AI Walkthrough Page" width="100%" />
+  <img src="./walkthrough.png" alt="Sovereign AI Walkthrough Page" width="100%" />
 </p>
 
 *The default Walkthrough view displaying core data sovereignty principles, multi-tenant navigation, and the interactive system topology diagram.*
@@ -288,8 +289,8 @@ When an auditor triggers `GET /admin/ledger/verify`, the Coordinator iterates th
 
 ### 1. Clone & Configure
 ```bash
-git clone https://github.com/your-org/fujitsu-agents.git
-cd fujitsu-agents
+git clone https://github.com/ussam-dri/Sovereign-Logistics-AI-Agents
+cd agents
 
 # Create your local environment configuration
 cp .env.example .env
@@ -417,8 +418,8 @@ The application features **dynamic client-side host resolution**. When deployed 
 
 4. **Deploy Application**:
    ```bash
-   git clone https://github.com/your-org/fujitsu-agents.git
-   cd fujitsu-agents
+   git clone https://github.com/ussam-dri/Sovereign-Logistics-AI-Agents
+   cd agents
    cp .env.example .env
    # Edit .env with your OpenRouter key if desired
 
