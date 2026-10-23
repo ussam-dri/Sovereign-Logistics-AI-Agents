@@ -1,4 +1,5 @@
-# Sovereign AI Multi-Agent Network
+# Sovereign Logistics AI Agents
+
 
 > Decentralized Agent-to-Agent (A2A) logistics collaboration with zero-knowledge data sovereignty enforcement,  LLM API reasoning, and cryptographically chained SHA-256 audit trails.
 
