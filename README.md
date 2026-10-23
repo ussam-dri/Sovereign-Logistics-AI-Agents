@@ -1,6 +1,6 @@
 # Sovereign AI Multi-Agent Network
 
-> Decentralized Agent-to-Agent (A2A) logistics collaboration with zero-knowledge data sovereignty enforcement, OpenRouter / Gemini LLM reasoning, and cryptographically chained SHA-256 audit trails.
+> Decentralized Agent-to-Agent (A2A) logistics collaboration with zero-knowledge data sovereignty enforcement,  LLM API reasoning, and cryptographically chained SHA-256 audit trails.
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-black?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat-square&logo=nextdotjs)](https://nextjs.org)
