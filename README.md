@@ -61,12 +61,12 @@ The platform deploys as an isolated multi-service mesh comprising 9 microservice
 
 ```mermaid
 flowchart TD
-    User["Logistics Operator / Browser"] -->|"HTTP :3000"| FE["Next.js 14 Minimalist Dashboard\n(Multi-Tenant UI)"]
+    User["Logistics Operator / Browser"] -->|"HTTP :3000"| FE[" Dashboard\n(Multi-Tenant UI)"]
     FE -->|"REST API :8000"| Coord["Sovereign Coordinator\n(Orchestrator & A2A Broker)"]
 
     subgraph Central ["Central Orchestration & Intelligence"]
         Coord
-        LLM["OpenRouter AI Gateway\n(Gemini 2.0 Flash / Claude / Llama)"]
+        LLM["LLM API  Gateway"]
         Coord <-->|"Structured Prompting"| LLM
     end
 
