@@ -17,7 +17,7 @@
 - [2. The Challenge vs. The Sovereign Solution](#2-the-challenge-vs-the-sovereign-solution)
 - [3. System Architecture & Topology](#3-system-architecture--topology)
 - [4. End-to-End Walkthrough](#4-end-to-end-walkthrough)
-- [5. Visual Interface & Screenshots](#5-visual-interface--screenshots)
+- [5. Walkthrough Interface](#5-walkthrough-interface)
 - [6. Security & Policy Enforcement (Sovereignty Guard)](#6-security--policy-enforcement-sovereignty-guard)
 - [7. Cryptographic SHA-256 Audit Ledger](#7-cryptographic-sha-256-audit-ledger)
 - [8. Repository Structure](#8-repository-structure)
@@ -162,86 +162,15 @@ The winning carrier is awarded the route. The final collaboration event is commi
 
 ---
 
-## 5. Visual Interface & Screenshots
+## 5. Walkthrough Interface
 
-The user interface follows a modern, high-contrast, minimalist black-and-white design inspired by clean enterprise dashboards. It features a sticky left sidebar, system status indicators, zero keyboard emojis, and an interactive architectural canvas.
-
----
-
-### Screenshot 1: Platform Walkthrough & Interactive Architecture Canvas
-*The default landing view explaining the core principles of sovereign multi-agent networks, accompanied by the interactive system topology diagram and component deep-dive inspector.*
+The application features a modern, high-contrast, minimalist black-and-white interface inspired by clean enterprise dashboards. The default landing view provides an interactive architectural canvas, real-time node telemetry, and a component deep-dive inspector.
 
 <p align="center">
-  <img src="docs/screenshots/01-walkthrough-dashboard.png" alt="Platform Walkthrough and Interactive Architecture" width="900" />
+  <img src="docs/screenshots/walkthrough.png" alt="Sovereign AI Walkthrough Page" width="100%" />
 </p>
 
-*Location: `docs/screenshots/01-walkthrough-dashboard.png`*
-
----
-
-### Screenshot 2: Interactive System Architecture Topology
-*A clean, end-to-end visualization of the data flow: Shipper Origin -> Sovereignty Guard Perimeter -> Safe A2A Protocol Wire -> Carrier Mesh -> Autonomous Arbitration -> Cryptographic Audit Ledger.*
-
-<p align="center">
-  <img src="docs/screenshots/02-architecture-diagram.png" alt="System Flow and Architecture Diagram" width="900" />
-</p>
-
-*Location: `docs/screenshots/02-architecture-diagram.png`*
-
----
-
-### Screenshot 3: Executive Hub & Microservice Mesh Topology
-*Super Admin view providing real-time ping latency, health indicators across all 8 microservices, active carrier participants, and the streaming cryptographic audit feed.*
-
-<p align="center">
-  <img src="docs/screenshots/03-executive-hub.png" alt="Executive Hub and Mesh Topology" width="900" />
-</p>
-
-*Location: `docs/screenshots/03-executive-hub.png`*
-
----
-
-### Screenshot 4: Live Scenario Execution & AI Reasoning Rationale
-*Real-time execution of the Casablanca corridor scenario (`SHP-1042`), displaying candidate proposals, winning carrier allocation, OpenRouter LLM reasoning, and chronological step traces.*
-
-<p align="center">
-  <img src="docs/screenshots/04-scenario-execution.png" alt="Live Scenario Execution and AI Reasoning" width="900" />
-</p>
-
-*Location: `docs/screenshots/04-scenario-execution.png`*
-
----
-
-### Screenshot 5: Cryptographic SHA-256 Block Chain Explorer
-*Live verification interface calculating SHA-256 parent-child hashes across historical audit blocks to mathematically prove ledger integrity and detect tampering.*
-
-<p align="center">
-  <img src="docs/screenshots/05-cryptographic-ledger.png" alt="Cryptographic Ledger Block Explorer" width="900" />
-</p>
-
-*Location: `docs/screenshots/05-cryptographic-ledger.png`*
-
----
-
-### Screenshot 6: Adversarial Attack Suite & Guard Policy Rejection
-*Demonstration of the Sovereignty Guard intercepting adversarial prompt injections, customer PII leaks, and commercial rate extraction with HTTP 403 Forbidden responses.*
-
-<p align="center">
-  <img src="docs/screenshots/06-policy-attack-blocked.png" alt="Policy Violation Blocked by Sovereignty Guard" width="900" />
-</p>
-
-*Location: `docs/screenshots/06-policy-attack-blocked.png`*
-
----
-
-### Screenshot 7: Multi-Tenant Enterprise Isolation
-*Inspection of Atlas Logistics internal records, showing that sensitive customer identities and telephone numbers exist solely within the shipper domain and never traverse the wire.*
-
-<p align="center">
-  <img src="docs/screenshots/07-tenant-isolation.png" alt="Multi-Tenant Enterprise Isolation" width="900" />
-</p>
-
-*Location: `docs/screenshots/07-tenant-isolation.png`*
+*The default Walkthrough view displaying core data sovereignty principles, multi-tenant navigation, and the interactive system topology diagram.*
 
 ---
 
